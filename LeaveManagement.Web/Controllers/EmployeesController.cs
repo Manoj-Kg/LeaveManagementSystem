@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿#nullable disable
+
+using AutoMapper;
 using LeaveManagement.Common.Constants;
 using LeaveManagement.Application.Contracts;
 using LeaveManagement.Data;

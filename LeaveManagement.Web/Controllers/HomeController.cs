@@ -1,4 +1,6 @@
-﻿using LeaveManagement.Common.Models;
+﻿#nullable disable
+
+using LeaveManagement.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;

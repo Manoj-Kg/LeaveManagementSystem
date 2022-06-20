@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.UI.Services;
+﻿#nullable disable
+
+using Microsoft.AspNetCore.Identity.UI.Services;
 using System.Net.Mail;
 
 namespace LeaveManagement.Web.Services
