@@ -1,4 +1,32 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(function () {
 
-// Write your JavaScript code.
+
+    var galleryImage = $(".gallery").find("img").first();
+
+ 
+    var images = [
+        "images/image2.png",
+        "images/leave-management.png",
+        "images/image4.png",
+        "images/corporateleave.png"        
+        
+    ];
+
+
+    var i = 0;
+
+    var galleryImage = $(".gallery").find("img")
+    galleryImage.on("click", switchToNextImage);
+
+    function switchToNextImage() {
+        i = (i + 1) % images.length;
+        galleryImage.fadeOut(function () {
+            galleryImage.attr("src", images[i]).fadeIn();
+        });
+    }
+
+});
+
+function logEvent() {
+    console.log("Mouse was clicked");
+}

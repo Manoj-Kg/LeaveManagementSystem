@@ -1,15 +1,13 @@
 #nullable disable
 
-using LeaveManagement.Data;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using AutoMapper;
 using LeaveManagement.Application.Configurations;
 using LeaveManagement.Application.Contracts;
 using LeaveManagement.Application.Repositories;
-using Microsoft.AspNetCore.Identity.UI.Services;
-using LeaveManagement.Web;
+using LeaveManagement.Data;
 using LeaveManagement.Web.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +22,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Host.UseSerilog((ctx, lc) => 
+builder.Host.UseSerilog((ctx, lc) =>
     lc.WriteTo.Console()
     .ReadFrom.Configuration(ctx.Configuration));
 

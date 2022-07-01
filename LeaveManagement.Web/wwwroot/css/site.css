@@ -1,7 +1,15 @@
 html {
-  font-size: 14px;
+  font-size: 15px;
 }
 
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    
+}
+
+h2,h3{
+    font-family:Calibri;
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
